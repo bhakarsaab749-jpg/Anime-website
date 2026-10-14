@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Anime - AnimeVerse</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#0b0b12;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    background:#151522;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+.anime-header{
+    display:flex;
+    gap:30px;
+    margin-bottom:35px;
+}
+
+.poster{
+    width:220px;
+    height:320px;
+    background:#222;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.info{
+    padding-top:10px;
+}
+
+.info h1{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.info p{
+    color:#bbb;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.tag{
+    display:inline-block;
+    background:#272733;
+    padding:7px 12px;
+    border-radius:20px;
+    margin:3px;
+    font-size:13px;
+}
+
+.episodes h2{
+    margin-bottom:20px;
+}
+
+.episode{
+    background:#171722;
+    padding:16px;
+    margin-bottom:10px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.watch{
+    background:#e50914;
+    color:white;
+    text-decoration:none;
+    padding:9px 15px;
+    border-radius:6px;
+}
+
+@media(max-width:600px){
+
+    .anime-header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .poster{
+        width:180px;
+        height:260px;
+    }
+
+    .info h1{
+        font-size:28px;
+    }
+
+    .episode{
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🎬 AnimeVerse</div>
+
+<a href="index.html">← Home</a>
+
+</header>
+
+
+<div class="container">
+
+<section class="anime-header">
+
+<img
+class="poster"
+src="https://placehold.co/300x450?text=My+Anime"
+alt="My Anime"
+>
+
+<div class="info">
+
+<h1>My Anime</h1>
+
+<p>
+This is an example anime description.
+You can replace this text with the description
+of your own or authorized anime content.
+</p>
+
+<span class="tag">Action</span>
+<span class="tag">Fantasy</span>
+<span class="tag">Adventure</span>
+
+</div>
+
+</section>
+
+
+<section class="episodes">
+
+<h2>📺 Episodes</h2>
+
+
+<div class="episode">
+
+<span>Episode 1</span>
+
+<a class="watch" href="#">
+Watch
+
+</a>
+
+</div>
+
+
+<div class="episode">
+
+<span>Episode 2</span>
+
+<a class="watch" href="#">
+Watch
+
+</a>
+
+</div>
+
+
+<div class="episode">
+
+<span>Episode 3</span>
+
+<a class="watch" href="#">
+Watch
+
+</a>
+
+</div>
+
+
+<div class="episode">
+
+<span>Episode 4</span>
+
+<a class="watch" href="#">
+Watch
+
+</a>
+
+</div>
+
+
+<div class="episode">
+
+<span>Episode 5</span>
+
+<a class="watch" href="#">
+Watch
+
+</a>
+
+</div>
+
+
+</section>
+
+</div>
+
+</body>
+  </html>
