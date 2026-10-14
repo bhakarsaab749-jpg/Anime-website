@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AnimeVerse</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0b0b12;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #151522;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(
+                rgba(20,20,35,0.8),
+                rgba(10,10,18,1)
+            );
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #bbbbc8;
+            margin-bottom: 25px;
+        }
+
+        .search {
+            width: 90%;
+            max-width: 500px;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 30px 20px;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        .anime-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .anime-card {
+            background: #171722;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .anime-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .anime-info {
+            padding: 12px;
+        }
+
+        .anime-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .watch {
+            display: inline-block;
+            background: #e50914;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 25px;
+            text-align: center;
+            background: #151522;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎬 AnimeVerse</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#anime">Anime</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <h1>Watch Your Favorite Anime</h1>
+
+    <p>Discover anime and episodes in one place.</p>
+
+    <input
+        class="search"
+        type="text"
+        placeholder="Search anime..."
+        id="searchBox"
+    >
+
+</section>
+
+
+<section class="container" id="anime">
+
+    <h2>🔥 Latest Anime</h2>
+
+    <div class="anime-grid" id="animeGrid">
+
+        <div class="anime-card">
+
+            <img
+                src="https://placehold.co/300x450?text=Anime+1"
+                alt="Anime 1"
+            >
+
+            <div class="anime-info">
+
+                <h3>My Anime</h3>
+
+                <a class="watch" href="#">
+                    Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="anime-card">
+
+            <img
+                src="https://placehold.co/300x450?text=Anime+2"
+                alt="Anime 2"
+            >
+
+            <div class="anime-info">
+
+                <h3>Another Anime</h3>
+
+                <a class="watch" href="#">
+                    Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="anime-card">
+
+            <img
+                src="https://placehold.co/300x450?text=Anime+3"
+                alt="Anime 3"
+            >
+
+            <div class="anime-info">
+
+                <h3>Anime World</h3>
+
+                <a class="watch" href="#">
+                    Watch Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 AnimeVerse
+
+</footer>
+
+
+<script>
+
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("input", function() {
+
+    const search = this.value.toLowerCase();
+
+    const cards = document.querySelectorAll(".anime-card");
+
+    cards.forEach(function(card) {
+
+        const name =
+            card.querySelector("h3").textContent.toLowerCase();
+
+        if (name.includes(search)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+  </html>
